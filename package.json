@@ -1,0 +1,9 @@
+{
+  "name": "mortgage-calculator",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "echo \"No test specified\" && exit 0"
+  },
+  "author": "Karol Bilicki",
+  "license": "UNLICENSED"
+}
