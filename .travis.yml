@@ -1,44 +1,33 @@
-sudo: false
 language: node_js
 node_js:
-  - 12
-
+- 12
 install:
-  - npm ci
-  - ./scripts/install_terraform.sh
-
+- npm ci
+- "./scripts/install_terraform.sh"
 stages:
-  - name: Test
-  - name: Build
-  - name: Deploy
-    if: type=push AND branch=master
+- name: Test
+- name: Deploy
 
 env:
-  global:
-    - TERRAFORM_VERSION=$(cat .terraform-version)
-    - AWS_ACCESS_KEY_ID=AKIAIT2SLOGLAZPMWLJA
-    - secure: "Fwb82w/oVozilv7QL0sZdUB/sG4FMPj0E4TGdktbUQWWzAjzNTah2DIhq5BW/7ACxoETRqZLFr4M+5KGvhnxAezqUshtvbd2EXwBKdvdra7st01RMxE32YP4FKolDIKh0Z+b1qWG7rIDwFhHSMTuPQyP/2s8puHuvCNA+emYtC1slUvH8W9ahNlFhtF9EYpD6eHz5oWdSCYzvNUBufp1tIzr1rrSRS6je5QwoIeaCVHmE3ZcBNnWMKPPQyk9oRmeoo+RiKLj//K9VuzVd4sAm939CfJon7Km1kdP6tq5QBqs0cX6S7LiDppeA1NHNOPZVQHSknHRVc4hveMQU1c+IS0aC+2xAEiVs8OY/WOjvVLn6zN6Q4HaY8iGF0Vy19K1LVL4fqk2bchj0lerHPMI4WzEk1R2XIKiAZ6rUp2EQXBGZpw/c1qDhjHRI0Oni5qKVKmKPlNZKOg++7wSKDX4vj00veZ8WQ+E1HY7HfcEsOU3LwWO/QdqxstmcN2MS3dnNUaDmpN7GxXqm//1S9RBdLi7McTFmaPV555LzRGNEnjK7eT748UQ7c1lbgQyWzMboUbVqkxZzpNu/4+F65evlJ4ePP8KamdK9fbe2dxEovGXWBNd+r61Ro+7CiDSyXSzIegKH+ldCbVdQl3PFlHlWvoIe08S2jMEuGIl6he3qSk="
-
+  - TERRAFORM_VERSION=$(cat .terraform-version)
 jobs:
   include:
-    - stage: Test
-      script:
-        - npm run test
-        - terraform init
-        - terraform plan
-    - stage: Build
-      script:
-        - npm run build
-    - stage: Deploy
-      script:
-        - terraform init
-        - terraform apply -auto-approve
-
-deploy:
-  provider: s3
-  access_key_id: $AWS_ACCESS_KEY_ID
-  secret_access_key: $AWS_SECRET_ACCESS_KEY
-  bucket: mortgage-calculator
-  local_dir: build
-  skip_cleanup: true
-  region: eu-west-2
+  - stage: Test
+    script:
+    - npm run test
+    - terraform init
+    - terraform plan
+  - stage: Deploy
+    script:
+    - terraform init
+    - terraform apply -auto-approve
+    - npm run build
+    deploy:
+      provider: s3
+      access_key_id: $AWS_ACCESS_KEY_ID
+      secret_access_key: $AWS_SECRET_ACCESS_KEY
+      bucket: mortgage-calculator-bilicki
+      acl: public_read
+      local_dir: build
+      skip_cleanup: true
+      region: eu-west-2
