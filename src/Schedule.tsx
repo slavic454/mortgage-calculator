@@ -3,7 +3,6 @@ import { useSelector } from "react-redux";
 import { RootState } from './index';
 import './Schedule.scss';
 
-
 const Schedule = () => {
     const amount = useSelector((state:RootState)=> state.amount)
     const payback = useSelector((state:RootState)=> state.payback)
