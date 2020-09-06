@@ -5,5 +5,5 @@ export type Action = {
     payload: any; //FIXME
 }
 
-export const generateScheduleAction = (amount: string, payback: string) : Action =>
+export const generateScheduleAction = (amount: number, payback: number) : Action =>
     ({type: GENERATE_SCHEDULE, payload: {amount, payback} })

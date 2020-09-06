@@ -11,7 +11,7 @@ const LoanForm = () => {
     const dispatch = useDispatch()
     const handleSubmit = (event: React.FormEvent) => {
         event.preventDefault() ;
-        dispatch(generateScheduleAction(amountValue, paybackValue));
+        dispatch(generateScheduleAction(parseInt(amountValue,10), parseInt(paybackValue,10)));
     }
     return (
             <form onSubmit={handleSubmit}>
