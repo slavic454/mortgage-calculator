@@ -35,7 +35,7 @@ const Summary = ({totalInterests, amount, rate} : Props) => (
                     <h4> Amount : {addCurrency(amount.toFixed(2))} </h4>
                 </CardText>
                 <CardText>
-                    <h4>  Interest Rate: { addCurrency((100 * rate).toFixed(2)) + ' %'} </h4>
+                    <h4>  Interest Rate: { (100 * rate).toFixed(2) + ' %'} </h4>
                 </CardText>
                 <CardText>
                     <h4> Total interests: {addCurrency(totalInterests.toFixed(2))} </h4>
