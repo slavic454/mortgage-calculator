@@ -1,6 +1,7 @@
 import React from 'react';
 import { CardHeader, Card, CardBody, CardText, CardGroup } from 'reactstrap';
 import { PieChart } from "react-minimal-pie-chart";
+import {addCurrency} from "./Schedule";
 
 export type Props = {
     totalInterests: number,
@@ -31,16 +32,16 @@ const Summary = ({totalInterests, amount, rate} : Props) => (
         </CardBody>
         <CardBody>
                 <CardText>
-                    Amount : {amount}
+                    <h4> Amount : {addCurrency(amount.toFixed(2))} </h4>
                 </CardText>
                 <CardText>
-                    Interest Rate: { 100 * rate + ' %'}
+                    <h4>  Interest Rate: { addCurrency((100 * rate).toFixed(2)) + ' %'} </h4>
                 </CardText>
                 <CardText>
-                    Total interests: {totalInterests}
+                    <h4> Total interests: {addCurrency(totalInterests.toFixed(2))} </h4>
                 </CardText>
                 <CardText>
-                    Total sum : {amount + totalInterests}
+                    <h4> Total sum : {addCurrency((amount + totalInterests).toFixed(2))} </h4>
                 </CardText>
         </CardBody>
     </CardGroup>
