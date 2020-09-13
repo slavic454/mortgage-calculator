@@ -1,33 +1,33 @@
 language: node_js
 node_js:
-- 12
+  - 12
 install:
-- npm ci
-- "./scripts/install_terraform.sh"
+  - npm ci
+  - "./scripts/install_terraform.sh"
 stages:
-- name: Test
-- name: Deploy
+  - name: Test
+  - name: Deploy
 
 env:
   - TERRAFORM_VERSION=$(cat .terraform-version)
 jobs:
   include:
-  - stage: Test
-    script:
-    - npm run test
-    - terraform init
-    - terraform plan
-  - stage: Deploy
-    script:
-    - terraform init
-    - terraform apply -auto-approve
-    - npm run build
-    deploy:
-      provider: s3
-      access_key_id: $AWS_ACCESS_KEY_ID
-      secret_access_key: $AWS_SECRET_ACCESS_KEY
-      bucket: mortgage-calculator-bilicki
-      acl: public_read
-      local_dir: build
-      skip_cleanup: true
-      region: eu-west-2
+    - stage: Test
+      script:
+        - npm run test
+        - terraform init
+        - terraform plan
+    - stage: Deploy
+      script:
+        - terraform init
+        - terraform apply -auto-approve
+        - npm run build
+      deploy:
+        provider: s3
+        access_key_id: $AWS_ACCESS_KEY_ID
+        secret_access_key: $AWS_SECRET_ACCESS_KEY
+        bucket: mortgage-calculator-bilicki
+        acl: public_read
+        local_dir: build
+        skip_cleanup: true
+        region: eu-west-2
