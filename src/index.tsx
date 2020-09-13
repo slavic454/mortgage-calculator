@@ -6,6 +6,7 @@ import {createStore} from 'redux';
 import Root from './Root';
 import { GENERATE_SCHEDULE } from "./actions";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './index.scss'
 
 const rootReducer = (state = {}, action: any) => {
     switch (action.type) {
