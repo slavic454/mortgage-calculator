@@ -26,8 +26,7 @@ const Schedule = () => {
   if (!amount || !payback) {
     return (
       <Card>
-        {' '}
-        <CardImg src={Ad} />{' '}
+        <CardImg src={Ad} />
       </Card>
     );
   }

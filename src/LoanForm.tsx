@@ -26,15 +26,13 @@ const LoanForm = () => {
     <Form onSubmit={handleSubmit}>
       <FormGroup>
         <Label size="lg" htmlFor={'amount'}>
-          {' '}
-          {'💵 Amount '}{' '}
+          {'💵 Amount '}
         </Label>
         <Input bsSize="lg" name={'amount'} {...bindAmount} type="number" />
       </FormGroup>
       <FormGroup>
         <Label size="lg" htmlFor={'payback'}>
-          {' '}
-          {'📅 Payment time in years'}{' '}
+          {'📅 Payment time in years'}
         </Label>
         <Input bsSize="lg" {...bindPayback} type="number" />
       </FormGroup>

@@ -1,0 +1,95 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Root renders correctly 1`] = `
+<div
+  className="container"
+>
+  <div
+    className="row"
+  >
+    <div
+      className="col"
+    >
+      <div
+        className="card-header"
+      >
+        <h1>
+           
+          Mortgage Calculator
+           
+        </h1>
+      </div>
+    </div>
+  </div>
+  <div
+    className="row"
+  >
+    <div
+      className="col"
+    >
+      <form
+        className=""
+        onSubmit={[Function]}
+      >
+        <div
+          className="form-group"
+        >
+          <label
+            className="col-form-label-lg"
+            htmlFor="amount"
+          >
+            💵 Amount 
+          </label>
+          <input
+            className="form-control-lg form-control"
+            name="amount"
+            onChange={[Function]}
+            type="number"
+            value="300000"
+          />
+        </div>
+        <div
+          className="form-group"
+        >
+          <label
+            className="col-form-label-lg"
+            htmlFor="payback"
+          >
+            📅 Payment time in years
+          </label>
+          <input
+            className="form-control-lg form-control"
+            onChange={[Function]}
+            type="number"
+            value="20"
+          />
+        </div>
+        <button
+          aria-label={null}
+          className="btn btn-primary btn-lg btn-block"
+          disabled={false}
+          onClick={[Function]}
+        >
+          Calculate
+        </button>
+      </form>
+    </div>
+  </div>
+  <div
+    className="row"
+  >
+    <div
+      className="col"
+    >
+      <div
+        className="card"
+      >
+        <img
+          className="card-img"
+          src="mortgage-ad.jpg"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
