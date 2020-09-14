@@ -13,9 +13,11 @@
     "jest": true
   },
   "rules": {
-    "prettier/prettier": ["error", { "singleQuote": true }]
+    "prettier/prettier": ["error", { "singleQuote": true }],
+    "no-use-before-define": ["off", { "variables": false }]
   },
   "settings": {
+    "import/resolver": { "typescript": {} },
     "react": {
       "pragma": "React",
       "version": "detect"
