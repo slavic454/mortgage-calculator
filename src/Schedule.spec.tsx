@@ -2,6 +2,12 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import Schedule from './Root';
 
+jest.mock('react-minimal-pie-chart', () => {
+  return {
+    PieChart: () => <div> {'PieChart'} </div>,
+  };
+});
+
 jest.mock('react-redux', () => {
   const ActualReactRedux = jest.requireActual('react-redux');
   return {

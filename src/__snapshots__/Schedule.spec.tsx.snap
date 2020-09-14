@@ -99,78 +99,11 @@ exports[`Root renders correctly 1`] = `
           <div
             className="card-body"
           >
-            <svg
-              height="100%"
-              viewBox="0 0 100 100"
-              width="100%"
-            >
-              <path
-                d="M 75 50 A 25 25 0 1 1 73.67643580491661 41.97339501559576"
-                fill="none"
-                stroke="#E38627"
-                strokeDasharray={148.90830857915458}
-                strokeDashoffset={148.90830857915458}
-                strokeWidth={50}
-                style={
-                  Object {
-                    "transition": "stroke-dashoffset 500ms ease-out",
-                  }
-                }
-              >
-                <title>
-                  principal
-                </title>
-              </path>
-              <path
-                d="M 73.67643580491661 41.97339501559576 A 25 25 0 0 1 75 49.99999999999997"
-                fill="none"
-                stroke="#C13C37"
-                strokeDasharray={8.171324100335063}
-                strokeDashoffset={8.171324100335063}
-                strokeWidth={50}
-                style={
-                  Object {
-                    "transition": "stroke-dashoffset 500ms ease-out",
-                  }
-                }
-              >
-                <title>
-                  interest
-                </title>
-              </path>
-              <text
-                dominantBaseline="central"
-                dx={-32.066956612358204}
-                dy={5.287749390916393}
-                style={
-                  Object {
-                    "fontSize": "10px",
-                    "fontWeight": "lighter",
-                  }
-                }
-                textAnchor="middle"
-                x={50}
-                y={50}
-              >
-                principal
-              </text>
-              <text
-                dominantBaseline="central"
-                dx={32.0669566123582}
-                dy={-5.287749390916425}
-                style={
-                  Object {
-                    "fontSize": "10px",
-                    "fontWeight": "lighter",
-                  }
-                }
-                textAnchor="middle"
-                x={50}
-                y={50}
-              >
-                interest
-              </text>
-            </svg>
+            <div>
+               
+              PieChart
+               
+            </div>
           </div>
           <div
             className="card-body"
