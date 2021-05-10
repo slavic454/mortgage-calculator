@@ -1,4 +1,4 @@
-I will copy paste here cloud front link :) Deployment is broken soon I will fix it :)
+I will copy paste here cloud front link :) Deployment is broken, I will fix it soon :)
 
 The project is developed in React with Redux
 
