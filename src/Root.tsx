@@ -9,7 +9,7 @@ const Root = () => (
     <Row>
       <Col>
         <CardHeader>
-          <h1> {'Mortgage Calculator'} </h1>
+          <h1> {'Mortgage calculator' } </h1>
         </CardHeader>
       </Col>
     </Row>
