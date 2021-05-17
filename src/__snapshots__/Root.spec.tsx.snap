@@ -15,7 +15,7 @@ exports[`Root renders correctly 1`] = `
       >
         <h1>
            
-          Mortgage Calculator
+          Mortgage calculator
            
         </h1>
       </div>
